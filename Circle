@@ -1,0 +1,36 @@
+float pressedX,pressedY;
+float dragedX,dragedY;
+float releasedX,releasedY;
+void setup(){
+size(300,300);
+background(255);
+}
+
+void draw()
+{ 
+  background(255);
+   stroke(255,0,0);
+   ellipse(pressedX,pressedY,50,50);
+  stroke(0,255,0);
+  ellipse(dragedX,dragedY,50,50);
+  stroke(0,0,255);
+  ellipse(releasedX,releasedY,50,50);
+}
+
+void mousePressed(){
+  println("mousePressed");
+  pressedX=mouseX;
+  pressedY=mouseY;
+}
+
+void mouseDragged(){
+  println("mouseDragged");
+  dragedX=mouseX;
+  dragedY=mouseY;
+}
+
+void mouseReleased(){
+  println("mouseReleased");
+  releasedX=mouseX;
+  releasedY=mouseY;
+}
